@@ -1,6 +1,5 @@
 @reqres
 Feature: Cover CRUD operations for one REST endpoint defined in reqres.in
-    Feature Description
 
 @create_scenario
 Scenario Outline: Teste the create api
@@ -17,8 +16,29 @@ Scenario Outline: Teste the create api
     # route "/api/users"
     # Action: "Create"
 
-    # Description: "The route allows creat users with blank name and job"
+    # Description: "The route allows creat users with blank name or blank job"
     # BDD - 
+
+@read_scenario
+Scenario Outline: Teste the create api
+    When read a user "<user_id>"
+    Then I validate the api response "<expect>"
+    
+    Examples:
+        | user_id  |
+        | 1        |
+        | Rodrigo  |
+
+@delete_scenario
+Scenario Outline: Teste the create api
+    When delete a user "<user_id>"
+    Then I validate the api response "<expect>"
+    
+    Examples:
+        | user_id  |
+        | 1        |
+        | Rodrigo  |
+
 
 Scenario Outline: Scenario Outline name
     Given i visit ""
@@ -29,4 +49,3 @@ Scenario Outline: Scenario Outline name
     | name | job | expect |
     | Value 1  | Value 2  | Value 3  |
     
-

@@ -16,7 +16,6 @@ if HEADLESS == "true"
     config.default_driver = :chrome_headless
   end
 
-  # Outros Sistemas
 elsif 
   Capybara.register_driver :selenium do |app|
     client = Selenium::WebDriver::Remote::Http::Default.new
@@ -33,7 +32,7 @@ elsif
   Capybara.page.driver.browser.manage.window.maximize
 end
 
-$dados = {}
+$scenario_data = {}
 Before do |scenario|
 end
 
