@@ -6,21 +6,21 @@ future. We would like you to demonstrate how you would do this by completing the
 tasks:
 
 1. Amazon: https://www.amazon.com/
-a) Create automated test cases for login/registration and 1 major end-to-end scenario;
+* a) Create automated test cases for login/registration and 1 major end-to-end scenario;
 2. Reqres: https://reqres.in/
-a) Cover CRUD operations for one REST endpoint defined in reqres.in;
-b) Cover scenarios which contain usage of several endpoints;
+* a) Cover CRUD operations for one REST endpoint defined in reqres.in;
+* b) Cover scenarios which contain usage of several endpoints;
 3. Test Cases and bugs
-a) Define 2 test cases. You can choose any from the tasks above.
-b) Define 2 bugs with priority critical or higher. You can choose any from the tasks above.
+* a) Define 2 test cases. You can choose any from the tasks above.
+* b) Define 2 bugs with priority critical or higher. You can choose any from the tasks above.
 
 * 1- BUG - The route allows create users with blank name or blank job
-        level: CRITICAL
-        route "/api/users"
-        Action: "Create"
+                level: CRITICAL
+                route "/api/users"
+                Action: "Create"
 
-        Description: "The route must'n allowed to create users with blank name or blank job. Please, fix this issue."
-        BDD - Regression automation
+                Description: "The route must'n allowed to create users with blank name or blank job. Please, fix this issue."
+                BDD - Regression automation
 
                 @create_scenario
                 Scenario Outline: Teste the create api
