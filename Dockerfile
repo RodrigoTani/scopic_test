@@ -38,9 +38,6 @@ RUN apk add --no-cache --quiet build-base
 # Set timezone
 RUN cp /usr/share/zoneinfo/Brazil/East /etc/localtime
 
-RUN mkdir -p $INSTALL_PATH
-WORKDIR $INSTALL_PATH
-
 # install required gem files for Capybara
 COPY Gemfile ./
 COPY Gemfile.lock ./
