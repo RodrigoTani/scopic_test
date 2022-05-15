@@ -56,7 +56,7 @@ tasks:
 
                 Evidence (GIF or IMAGE):
 ```
-![Evidence Image](https://github.com/RodrigoTani/scopic_test/imgs/main/bug_created.png?raw=true)
+![Evidence Image](imgs/bug_created.png?raw=true)
 
 ```
  2- BUG - The route accept different string than ID to delete
@@ -79,7 +79,7 @@ tasks:
 
                 Evidence (GIF or IMAGE):
 ```
-![Evidence Image](https://github.com/RodrigoTani/scopic_test/imgs/main/bug_created.png?raw=true)
+![Evidence Image](imgs/bug_created.png?raw=true)
 
 ## 4. Documentation
 a) A short description of the approach you would use for AT for the first 2 tasks. The
