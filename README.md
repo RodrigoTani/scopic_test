@@ -7,12 +7,12 @@ tasks:
 
 1. Amazon: https://www.amazon.com/
 * a) Create automated test cases for login/registration and 1 major end-to-end scenario;
-                $ cucumber -t '@amazon'
-        LOGIN and REGISTRATION I have automated the possible. Beacause there is a captcha validation
-                $  cucumber -t '@amazon_log_in'
-                $  cucumber -t '@amazon_registration'
-        The E2E scenario, I have automated de cart validation. The AT search a product item and add the item into a cart
-                $  cucumber -t '@amazon_add_item_cart'
+        $ cucumber -t '@amazon'
+* LOGIN and REGISTRATION I have automated the possible. Beacause there is a captcha validation
+        $  cucumber -t '@amazon_log_in'
+        $  cucumber -t '@amazon_registration'
+* The E2E scenario, I have automated de cart validation. The AT search a product item and add the item into a cart
+        $  cucumber -t '@amazon_add_item_cart'
 2. Reqres: https://reqres.in/
 * a) Cover CRUD operations for one REST endpoint defined in reqres.in;
 * b) Cover scenarios which contain usage of several endpoints;
