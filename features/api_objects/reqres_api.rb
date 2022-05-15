@@ -14,10 +14,10 @@ class ReqresApi < BaseAPI
     end
 
     def update(user_id, request_body)
-        request_body = {
-            "name": name,
-            "job": job
-        }
+        # request_body = {
+        #     "name": name,
+        #     "job": job
+        # }
         self.class.put("/api/users/#{user_id}", body: request_body.to_json, headers: @request_header, timeout: 30)
     end
 

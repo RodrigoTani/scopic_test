@@ -16,24 +16,31 @@ if HEADLESS == "true"
     config.default_driver = :chrome_headless
   end
 
-elsif 
+else 
   Capybara.register_driver :selenium do |app|
     client = Selenium::WebDriver::Remote::Http::Default.new
     client.read_timeout = 120
-  
-    Capybara::Selenium::Driver.new(app, {browser: :chrome, http_client: client})
+    
+    options = ::Selenium::WebDriver::Chrome::Options.new
+    options.add_argument("--incognito")
+    options.add_argument("--ignore-certificate-errors")
+    options.add_argument("--ignore-certificate-errors-spki-list")
+    options.add_argument("--ignore-ssl-errors")
+    options.add_argument('log-level=3')
+
+    Capybara::Selenium::Driver.new(app, browser: :chrome, http_client: client, options: options)
   end
-  
+
   Capybara.configure do |config|
     config.default_driver = :selenium 
   end
-
-  Capybara.current_session.driver.browser.manage.delete_all_cookies
-  Capybara.page.driver.browser.manage.window.maximize
 end
 
 $scenario_data = {}
 Before do |scenario|
+  if HEADLESS == "false"
+    Capybara.page.driver.browser.manage.window.maximize
+  end
 end
 
 After do |scenario|

@@ -16,7 +16,7 @@ tasks:
 
 * 1- BUG - The route allows create users with blank name or blank job
                 level: CRITICAL
-                route "/api/users"
+                route: "/api/users"
                 Action: "Create"
 
                 Description: "The route must'n allowed to create users with blank name or blank job. Please, fix this issue."
