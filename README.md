@@ -25,6 +25,7 @@ tasks:
         $  cucumber -t '@reqres' HL=true
 ```
 * b) Cover scenarios which contain usage of several endpoints;
+
 The List Users endpoint could be used for several endpoints. Because the api returned the user ID. To prevent that, I have covered the scenarios if the response code is different than 200 and I validate the response if is blank.
 ```ruby
         $  cucumber -t '@list' HL=true
