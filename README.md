@@ -79,7 +79,7 @@ tasks:
 
                 Evidence (GIF or IMAGE):
 ```
-![Evidence Image](imgs/bug_created.png?raw=true)
+![Evidence Image](imgs/bug_delete.png?raw=true)
 
 ## 4. Documentation
 a) A short description of the approach you would use for AT for the first 2 tasks. The
