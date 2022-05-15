@@ -22,7 +22,7 @@ tasks:
 ## 2. Reqres: https://reqres.in/
 * a) Cover CRUD operations for one REST endpoint defined in reqres.in;
 ```ruby
-        $  cucumber -t '@reqres'
+        $  cucumber -t '@reqres' HL=true
 ```
 * b) Cover scenarios which contain usage of several endpoints;
 ```ruby
@@ -30,6 +30,9 @@ tasks:
 ```
 ## 3. Test Cases and bugs
 * a) Define 2 test cases. You can choose any from the tasks above.
+```
+  I used BDD to write test cases. You can see in automation specifications/{testType}/spec/{?}.feature
+```
 * b) Define 2 bugs with priority critical or higher. You can choose any from the tasks above.
 ```
  1- BUG - The route allows create users with blank name or blank job
@@ -52,8 +55,32 @@ tasks:
                 | Rodrigo Tani |                          | 400    |
 
                 Evidence (GIF or IMAGE):
+```
+![Evidence Image](https://github.com/RodrigoTani/scopic_test/imgs/main/bug_created.png?raw=true)
 
 ```
+ 2- BUG - The route accept different string than ID to delete
+                level: HIGHER
+                route: "/api/users"
+                Action: "Delete"
+
+                Description: "The route must only delete with ID. I tried to put /api/users/"anyString" and I get 204 in response code. Please, fix this issue."
+                BDD - Regression automation
+
+                @read_scenario
+                Scenario Outline: Teste the create api
+                    When read a user "<user_id>"
+                    Then I validate the api response "<expect>"
+    
+                    Examples:
+                        | user_id  |
+                        | 1        |
+                        | Rodrigo  |
+
+                Evidence (GIF or IMAGE):
+```
+![Evidence Image](https://github.com/RodrigoTani/scopic_test/imgs/main/bug_created.png?raw=true)
+
 ## 4. Documentation
 a) A short description of the approach you would use for AT for the first 2 tasks. The
 description should clarify things like:
