@@ -31,9 +31,9 @@ tasks:
 ## 3. Test Cases and bugs
 * a) Define 2 test cases. You can choose any from the tasks above.
 * b) Define 2 bugs with priority critical or higher. You can choose any from the tasks above.
-
+```
  1- BUG - The route allows create users with blank name or blank job
-                level: CRITICAL
+                level: HIGHER
                 route: "/api/users"
                 Action: "Create"
 
@@ -51,6 +51,9 @@ tasks:
                 |              | Test Automation Engineer | 400    |
                 | Rodrigo Tani |                          | 400    |
 
+                Evidence (GIF or IMAGE):
+
+```
 ## 4. Documentation
 a) A short description of the approach you would use for AT for the first 2 tasks. The
 description should clarify things like:
