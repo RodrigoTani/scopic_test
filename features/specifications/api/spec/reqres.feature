@@ -31,3 +31,6 @@ Scenario Outline: Teste the create api
         | user_id  |
         | 1        |
         | Rodrigo  |
+@list
+Scenario: Validate list Users
+    When I validate the list users api

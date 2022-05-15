@@ -25,4 +25,7 @@ class ReqresApi < BaseAPI
         self.class.delete("/api/users/#{user_id}", headers: @request_header, timeout: 30)
     end
 
+    def list_users
+        self.class.get("/api/users", headers: @request_header, timeout: 30)
+    end
 end
